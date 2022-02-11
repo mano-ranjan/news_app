@@ -7,7 +7,7 @@ import 'dart:async';
 class ApiBaseHelper {
   final String _apiKey = "9b2fb7c1c9b14bcda149e7819e1203e8";
   static String baseUrl =
-      "https://newsapi.org/v2/everything?q=tesla&from=2022-01-03&sortBy=publishedAt&apiKey=9b2fb7c1c9b14bcda149e7819e1203e8";
+      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=9b2fb7c1c9b14bcda149e7819e1203e8";
 
   Future<dynamic> get(String url) async {
     print('Api Get, url $url');

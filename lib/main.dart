@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/bloc/newsdetails_bloc.dart';
 import 'package:news_app/home_page.dart';
 import 'package:news_app/providers/news_details_providers.dart';
 import 'package:provider/provider.dart';
@@ -8,8 +9,10 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => NewsDetailsModule()),
+      BlocProvider(create: (BuildContext context) => NewsDetailsCounterBloc()),
+      // BlocProvider(create: (BuildContext context) => GetNewsDetailsBloc()),
     ],
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
